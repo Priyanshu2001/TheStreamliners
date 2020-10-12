@@ -14,8 +14,8 @@ public class GroceryCartItem extends GroceryItem{
     }
     public static float extractQuantity(String quantityStr){
       String[] str = quantityStr.split(" ",quantityStr.length());
-      String replaceStr0= str[0].replace("kg"," ");
-      String replaceStr1= str[1].replace("g"," ");
+      String replaceStr0= str[0].replace("kg","");
+      String replaceStr1= str[1].replace("g","");
       int part1 = Integer.parseInt(replaceStr0);
       int part2 = Integer.parseInt(replaceStr1);
         return part1+(float)part2/1000;
