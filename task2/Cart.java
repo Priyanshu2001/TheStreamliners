@@ -10,14 +10,14 @@ public class Cart {
     float totalAmount;
 
     public Cart() {
-        cartItems= new ArrayList<>();
-        totalAmount=0;
+       this.cartItems= new ArrayList<>();
+        this.totalAmount=0;
 
     }
    public Cart add(GroceryCartItem item){
        builder.append("\n" + "\t" + item.name + " (" + "₹" + item.pricePerKg + " × " + item.quantity + "kg" + ") =" + " ₹" + item.price + "," + " \n");
         cartItems.add(item);
-        totalAmount += item.quantity* item.price;
+        totalAmount += item.price;
         return this;
     }
 
